@@ -1,19 +1,8 @@
 # clj-cheshire-cat
 
-FIXME
+Simple frontend made with clojure and clojurescript.
 
-## Prerequisites
+Requisite: jdk8, notice that jdk11 still doesn't work.
 
-You will need [Leiningen][] 2.0.0 or above installed.
+https://github.com/emezeske/lein-cljsbuild/issues/499
 
-[leiningen]: https://github.com/technomancy/leiningen
-
-## Running
-
-To start a web server for the application, run:
-
-    lein ring server
-
-## License
-
-Copyright © 2020 FIXME
