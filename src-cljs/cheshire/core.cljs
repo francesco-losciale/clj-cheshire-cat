@@ -11,5 +11,5 @@
   (go
     (let [response (<! (http/get "/cheshire-cat"))
           body (:body response)]
-      (ef/at "#cat-name" (ef/content (:name body)))
-      (ef/at "#status" (ef/content (:status body))))))
+      (ef/at "#cat-name" (ef/content (:name body))
+             "#status" (ef/content (:status body))))))
