@@ -4,11 +4,14 @@
 (defn hi-queen [phrase]
   (str phrase ", so please your Majesty."))
 
+;(defmacro def-hi-queen [name phrase]
+;  (list 'defn
+;        (symbol name)
+;        []
+;        (list 'hi-queen phrase)))
 (defmacro def-hi-queen [name phrase]
-  (list 'defn
-        (symbol name)
-        []
-        (list 'hi-queen phrase)))
+  `(defn ~(symbol name) []
+     (hi-queen ~phrase)))
 
 (def-hi-queen alice-hi-queen "My name is Alice")
 (def-hi-queen march-hare-hi-queen "My name is March Hare")
