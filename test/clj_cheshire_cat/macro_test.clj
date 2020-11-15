@@ -4,11 +4,15 @@
 (defn hi-queen [phrase]
   (str phrase ", so please your Majesty."))
 
-(defn alice-hi-queen []
-  (hi-queen "My name is Alice"))
+(defmacro def-hi-queen [name phrase]
+  (list 'defn
+        (symbol name)
+        []
+        (list 'hi-queen phrase)))
 
-(defn march-hare-hi-queen []
-  (hi-queen "My name is March Hare"))
+(def-hi-queen alice-hi-queen "My name is Alice")
+(def-hi-queen march-hare-hi-queen "My name is March Hare")
+
 
 (deftest test-app
   (testing "Test Alice introduction"
